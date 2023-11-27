@@ -1,3 +1,4 @@
+import sys 
 def binary_search(array, target):
     lg = int(len(array))
     
@@ -21,8 +22,7 @@ if __name__ == "__main__":
     array = []
     for i in range(0,100,2):
         array.append(i)
-    print(array)
-    if not binary_search(array, 8):
+    if not binary_search(array, int(sys.argv[1])):
         print("not found!")
     else:
         print("found!")
