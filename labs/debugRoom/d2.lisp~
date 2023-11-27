@@ -1,0 +1,6 @@
+(defstruct book
+  title
+  author
+  pages)
+
+

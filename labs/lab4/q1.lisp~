@@ -1,0 +1,14 @@
+(defstruct RECORD name score)
+
+(defun sort-student-records (v f)
+  (dotimes (i (list-length v) v)
+    (do ((j i (1+ j)))
+        ((= j (list-length v)))
+      (if (funcall f (nth i ) (nth j v))
+          (rotatef (nth i v) (nth j v))))
+    ))
+
+
+
+
+

@@ -1,0 +1,27 @@
+(defstruct person
+  name
+  age)
+
+
+(defun filter-ages (vect age)
+  (let ((x (make-array 0 :adjustable t :fill-pointer 0)))
+     (dotimes (i (length vect))
+       (if (and (typep (aref vect i) 'person)
+                (> (person-age (aref vect i)) age)) (vector-push-extend (aref vect i) x))) x))
+
+
+(defun array-group (a1 a2)  
+  (let ((x (make-array 0 :adjustable t :fill-pointer 0))
+        (size (max (array-total-size a1) (array-total-size a2))))
+    (dotimes (i size)
+      (let ((y (make-array 2)))
+        (cond ((> i )))
+        ))
+    )
+
+  )
+
+  
+       
+  
+  

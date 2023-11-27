@@ -1,0 +1,5 @@
+(defun GRADE(num_grade)
+  (/ num_grade 10)
+
+  
+  )

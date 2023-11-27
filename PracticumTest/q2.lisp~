@@ -1,0 +1,4 @@
+(defun COMB (n k)
+  (cond ((or (= n 0) (= k n)) 1)
+      )
+  )

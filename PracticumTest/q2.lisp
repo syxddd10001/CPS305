@@ -1,0 +1,7 @@
+(defun COMB (n k)
+  (print n)
+  (print k)
+  (cond ((or (= n 0) (= k n)) 1)
+        ((and (> n k) (> k 0)) (+ (COMB (- n 1) k) (COMB (- n 1) (- k 1))))
+        (t 0))
+  )

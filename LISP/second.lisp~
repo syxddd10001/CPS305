@@ -1,0 +1,5 @@
+(defun is-odd (n)
+  (mod n 2 = 0)
+  )
+
+(print (make-even 3))

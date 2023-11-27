@@ -1,0 +1,25 @@
+Useful Vim commands:
+
+Normal Mode:
+h - Left
+j - Down
+k - Up
+l - Right
+
+w: write/save file
+q: quit file
+q!: quit file without saving changes
+wq: write and quit file
+d$ - delete to the end of the line
+v - Visual Mode
+y - yank or copy
+p - put or paste
+dd - delete/cut current line
+<int> dd - delete <int> number of lines
+dw - delete word
+! - external commands
+:w <FILENAME> - writes the current file to <FILENAME>
+visual mode + selected lines + :<SELECTED LINES>w FILENAME - writes the selected
+lines to <FILENAME>
+
+

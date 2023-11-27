@@ -1,0 +1,11 @@
+(defun convert_to_letter (num_grade)
+  (case (floor num_grade)
+  (10 "A+")
+  (9 "A")
+  (8 "A-")
+  (7 "B")
+  (6 "C")
+  (5 "D")
+  (otherwise "F"))
+ 
+(print(write(convert_to_letter(90))))

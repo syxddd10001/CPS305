@@ -1,0 +1,21 @@
+Terms: 
+C = Ctrl
+M = Alt
+ 
+
+Basic Emacs commands:
+C-x C-s -- save file
+C-x C-c -- close file
+C-x [Left]/[Right] -- next or previous buffer
+C-x u -- undo
+C-g C-x u -- redo
+C-g -- undo <-> redo
+C-w -- cut
+M-w -- copy
+C-y -- paste
+
+
+
+
+M-x slime -- opens slime
+

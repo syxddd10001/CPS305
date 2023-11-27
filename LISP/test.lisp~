@@ -1,0 +1,13 @@
+(defun list-len (ls &optional (len 0))
+  (cond ((null ls) len)
+        (t (list-len (cdr ls) (+ 1 len))))
+  )
+
+(defun first-last (ls &optional pos last)
+  (cond ((null ls) (list pos last))
+        ((null pos) (first-last (cdr ls) (car ls) last))
+        ((and (null last) (not (null pos))) (first-last (cdr ls) pos pos))
+        (t (first-last (cdr ls) pos (car ls))))
+
+  
+  )

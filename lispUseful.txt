@@ -1,0 +1,123 @@
+Numbers: 2, 9, 6.3
+Individual characters: #\a
+Boolean: T, NIL
+
+Quote or ' x: return x without evaluating it
+
+Logical Operators: AND, OR
+(and (condition1 condition2 condition3 ... conditionN))
+(or (condition1 condition2 condition3 ... conditionN))
+
+Conditional: IF, CASE, COND, WHEN, UNLESS
+(if a1 (do something) (else do this))
+
+(case (condition)
+	(Case1 Value1)
+	(Case2 Value2)	
+	(Case3 Value3)
+		 ...	
+	(CaseN ValueN)	
+)
+
+(cond ((condition 1) value1)
+	  ((condition 2) value2)
+		...	  
+	  ((conditionN) valueN)
+	  (t 'unknown)
+)
+
+(when (condition) (return this)) <- returns when condition happens
+(unless (condition) (return this)) <- returns if condition DOESNT happen
+
+Lambda: 
+(LAMBDA (parameter) (the function) value)
+
+
+Variables: LET, LET*, DEFVAR, SETQ, SETF, DEFPARAMETER
+(let ((variable1 value1) (variable2 value2) ... (variableN valueN))
+	(any code)
+)
+
+(let* ((variable1 value1) (variable2 value2) ... (variableN valueN))
+	(any code)
+) <- for let*, the variables are evaluated chronologically from variable1 to variableN
+
+(defvar *variableName* value) <- * is a convention
+
+(setf *variableName* newValue)  
+(:= *variableName* newValue2)  -- both do the same thing
+(setq *variableName* valueX) -- seem to be doing the same thing as the last 2
+
+(defparameter *variable* InitialValue) 
+defparameter always aligns initial value, defvar assigns if variable is undefined
+
+Loops: DOTIMES, DO, DO*, DOLIST
+(dotimes (variable (how to count) 
+		 (return at the end))
+	body -- do anything here
+)
+
+(do (variable1 definition ... variableN definition)
+	(end-test return-value)
+	body -- do anything here
+)
+
+(do* (variable1 definition ... variableN definition) <- variableevaulated in chronology
+	(end-test return-value)
+	body -- do anything here
+)
+
+(dolist (value list) 
+	(body)
+)
+
+
+Functions and Structure: DEFUN, DEFSTRUCT
+(defun funcName (arg1 arg2 ... argn)
+	(function body)
+	(+ 1 1) <- the last evaluated line is returned
+)
+
+(defstruct structName property1 property2 ... propertyN)
+
+(make-structName :property1 value1 :property2 value2)
+(structName-propertyN structNameN)
+
+
+Arrays
+#(1 3 4 6) <- literal array (cant be changed)
+(make-array size) <- makes array of length 'size'
+(make-array size :inital-element x) <- makes array of length 'size', with x assigned to each value
+(aref array index) <- returns the value of array at 'index'
+(array-total-size arrayName)
+
+
+Vectors
+(vec (make-array 0 :fill-pointer t :adjustable t))
+(vector-push-extend value vec) -- pushes value to vector
+(rtl:slice vectorName fromIndex toIndex) -- fromIndex is optional, slices from 0 if not given
+
+(rotatef arrayValueX arrayValueY) -- swap X and Y
+(length vectorName)  
+
+
+List
+(list-length listLength)
+(first list)
+(rest list)
+(CAR list)
+(CDR list)
+(CONS 'value '(list)) -- inserts value as the head of the list
+
+Stack: PUSH, POP, PEEK, IS-EMPTY
+(push value stackName)
+(pop stackName) -- pops the first value and returns it
+
+
+Other Functions
+ash 
+oddp
+evenp
+minusp
+inc
+typef
