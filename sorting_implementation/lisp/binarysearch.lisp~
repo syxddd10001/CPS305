@@ -1,0 +1,14 @@
+(defun binarySearch (arr targ)
+  (let ((arrlen (array-dimensions arr)))
+   (if (eq (array-dimensions arr) 0) '())         
+
+   
+   
+   ;(if (< (aref arr (floor (/ arrlen 2))) targ) (print "less"))
+
+   ;(if (> (aref arr (floor (/ arrlen 2))) targ) (print "more"))
+   )
+  )
+  
+  
+  

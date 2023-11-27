@@ -1,0 +1,8 @@
+(defun insertionsort (ls)
+  (dotimes (i (1- (length ls)))
+      (do ((j (1- i)))
+          ((minusp j))
+        (if (< (aref ls (1+ j)) (aref ls j))
+            (rotatef (aref ls (1+ j)) (aref ls j))
+            )))
+  ls)

@@ -1,0 +1,8 @@
+"Selection Sort Algorithm Implementation"
+
+(defun selectionsort (array)
+  (dotimes (curr (1+ (array-dimensions array)))
+    (let (best (curr)) (print best))
+    )
+
+  )
